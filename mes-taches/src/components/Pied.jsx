@@ -1,9 +1,9 @@
-export default function Pied() {
+export default function Pied({ auteur }) {
     const year = new Date().getFullYear()
     return (
         <footer>
             <p>
-                TP React - {year} / {year+1} 
+                TP React - réalisé par {auteur} - {year} / {year+1} 
             </p>
         </footer>
     )

@@ -1,17 +1,13 @@
-export default function ListeTaches() {
+import Tache from "./Tache";
+export default function ListeTaches({ taches }) {
+  if (taches.length == 0) {
+    return <p className="vide">Aucune tâche à afficher.</p>;
+  }
   return (
     <ul className="liste-taches">
-      <li className="tache terminee">
-        <span className="titre">Comprendre les composants</span>
-      </li>
-
-      <li className="tache">
-        <span className="titre">Apprendre les props en React</span>
-      </li>
-
-      <li className="tache">
-        <span className="titre">Comprendre le hook useState</span>
-      </li>
+      {taches.map((tach) => (
+        <Tache key={tach.id} titre={tach.titre} terminee={tach.terminee} />
+      ))}
     </ul>
   );
 }
