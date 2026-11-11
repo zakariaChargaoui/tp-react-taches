@@ -1,9 +1,10 @@
+const ANNEE = new Date().getFullYear()
+
 export default function Pied({ auteur }) {
-    const year = new Date().getFullYear()
     return (
         <footer>
             <p>
-                TP React - réalisé par {auteur} - {year} / {year+1} 
+                TP React - réalisé par {auteur} - {ANNEE}
             </p>
         </footer>
     )
